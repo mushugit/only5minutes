@@ -22,7 +22,7 @@ public class WinManager : MonoBehaviour
     {
         maxWinIndex = WinStringMiddle.Length;
 
-        StartCoroutine("LostTextDisplay");
+        StartCoroutine("WinTextDisplay");
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class WinManager : MonoBehaviour
                 MainMenu();
             }
             else{
-                StopCoroutine("LostTextDisplay");
+                StopCoroutine("WinTextDisplay");
                 WinText.text = $"{WinStringTop}\r\n{WinStringMiddle}";
                 scrollEnded = true;
                 StartCoroutine("EndDisplay");

@@ -2037,7 +2037,7 @@ MonoBehaviour:
   InstructionComputer: Utiliser les mots de l'ordi
   WordListTextFile: {fileID: 4900000, guid: 21c29bdfe8e4797478051f14cae7f797, type: 3}
   ScorePrefix: 'Nb mots : '
-  WinWordCount: 800
+  WinWordCount: 10
   score: 0
   timer: 300
   minWordSize: 3

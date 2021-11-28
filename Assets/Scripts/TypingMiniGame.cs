@@ -133,11 +133,7 @@ public class TypingMiniGame : MonoBehaviour
     }
 
     private void LoadNextLevel(){
-        Debug.Log("Next level");
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-        Application.Quit();
+        SceneManager.LoadScene("WIN");
     }
 
     private void Loose(){
