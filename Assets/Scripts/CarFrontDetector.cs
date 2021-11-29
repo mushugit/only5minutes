@@ -20,7 +20,7 @@ public class CarFrontDetector : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log($"Trigger enter {this.transform.parent}");
         var otherCar = other.gameObject.GetComponent<Car>();
