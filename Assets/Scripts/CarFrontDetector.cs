@@ -17,14 +17,21 @@ public class CarFrontDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Trigger enter {this.transform.parent}");
-        var otherCar = other.gameObject.GetComponent<Car>();
-        if(otherCar != null){
+        Debug.Log($"Trigger enter {other.gameObject.name} / {gameObject.name}", gameObject);
+        if (other.transform.parent == null)
+        {
+            return;
+        }
+        Debug.Log($"Trigger enter {this.transform.parent}", other.gameObject);
+
+        var otherCar = other.transform.parent.GetComponent<Car>();
+        if (otherCar != null)
+        {
             //Match speed and decelerate
             myCar.Speed = otherCar.Speed - deltaSpeed;
         }
